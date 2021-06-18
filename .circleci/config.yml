@@ -20,7 +20,7 @@ jobs:
       - run:
           name: notify build is finished
           command: echo "The build is finished!"
-          
+
   testlinks:
     executor: ci-executor
     steps:
@@ -40,7 +40,7 @@ jobs:
 
       - run:
           name: run html proofer
-          command: bundle exec htmlproofer ./_site --check-html
+          command: bundle exec htmlproofer  --allow-hash-href ./_site --check-html
 
       - run:
           name: notify test is finished
